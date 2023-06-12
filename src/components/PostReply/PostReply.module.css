@@ -1,0 +1,20 @@
+.reply {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--moderate-blue);
+}
+
+.reply:hover,
+.reply:active {
+  opacity: 0.5;
+}
+
+.replyIcon {
+  height: 14px;
+}
+
+.replyText {
+  font-weight: 500;
+}

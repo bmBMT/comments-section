@@ -1,0 +1,20 @@
+.authorPost {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+
+.author {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-blue);
+  display: flex;
+  gap: 6px;
+}
+
+.postPublished {
+  font-size: 14px;
+  color: var(--grayish-blue)
+}

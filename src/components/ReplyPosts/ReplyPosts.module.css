@@ -1,0 +1,12 @@
+.replys {
+  position: relative;
+  display: flex;
+}
+
+.separator {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 20px;
+}

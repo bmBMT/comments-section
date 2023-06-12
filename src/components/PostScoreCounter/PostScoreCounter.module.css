@@ -1,0 +1,26 @@
+.counter {
+  background-color: var(--very-light-gray);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+}
+
+.count {
+  font-weight: 500;
+  color: var(--moderate-blue);
+}
+
+.changer {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: inherit;
+  cursor: pointer;
+  color: red;
+}

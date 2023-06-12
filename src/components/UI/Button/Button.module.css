@@ -1,0 +1,22 @@
+.btn {
+  height: fit-content;
+  padding: 12px 20px;
+  background-color: var(--moderate-blue);
+  border-radius: 6px;
+  border: none;
+  color: var(--light-gray);
+  font-weight: 500;
+  cursor: pointer;
+  border: .2px solid var(--drk-blue);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgba(84,87,182, 0.5);
+}
+
+@media (max-width: 340px) {
+  .btn {
+    padding: 6px 7px;
+  }
+}
