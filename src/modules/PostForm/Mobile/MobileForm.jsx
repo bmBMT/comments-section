@@ -5,14 +5,16 @@ import Row from "../../../components/UI/Row/Row";
 import Textarea from "../../../components/UI/Textarea/Textarea";
 import Wrapper from "../../../components/UI/Wrapper/Wrapper";
 import CancelButton from "../../../components/CancelButton/CancelButton";
+import usePostEnter from "../../../utils/handleKeyDown";
 
 const MobileForm = ({ replyingTo, textRef, img, addPost, isReply, cancelCallback, type }) => {
   const defaultValue = replyingTo ? `@${replyingTo}, ` : "";
+  const handleKeyDown = usePostEnter(addPost);
 
   return (
     <Wrapper>
       <Col gap={12}>
-        <Textarea ref={textRef} defaultValue={defaultValue} placeholder="Add a comment..." />
+        <Textarea ref={textRef} defaultValue={defaultValue} placeholder="Add a comment..." onKeyDown={handleKeyDown} />
         <Row justifyContent="space-between" alignItems="center">
           <Avatar img={img} />
           <Row width="fit-content" alignItems="center" gap={16}>

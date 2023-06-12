@@ -6,6 +6,7 @@ import CancelButton from "../CancelButton/CancelButton";
 import Button from "../UI/Button/Button";
 import { useDispatch } from "react-redux";
 import { changeCommentContent } from "../../store/slices/commentsSlice";
+import handleKeyDown from "../../utils/handleKeyDown";
 
 const EditForm = ({ comment, cancelCallback }) => {
   const textRef = useRef();
@@ -19,7 +20,12 @@ const EditForm = ({ comment, cancelCallback }) => {
 
   return (
     <Col alignItems="end" gap={16}>
-      <Textarea ref={textRef} style={{ height: 120 }} defaultValue={comment.content} />
+      <Textarea
+        ref={textRef}
+        style={{ height: 120 }}
+        defaultValue={comment.content}
+        onKeyDown={(e) => handleKeyDown(e, saveComment)}
+      />
       <Row width="fit-content" alignItems="center" gap={24}>
         <CancelButton cancelCallback={cancelCallback} />
         <Button onClick={saveComment}>UPDATE</Button>
