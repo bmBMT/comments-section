@@ -8,7 +8,7 @@ import DesktopForm from "./Desktop/DesktopForm";
 
 const PostForm = ({ isReply = false, replyComment = {}, setIsReplying }) => {
   const textRef = useRef();
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user.user);
   const commentsCount = useSelector((state) => state.comments.count);
   const dispatch = useDispatch();
   const addPost = isReply ? addReplyPost : addNewPost;
