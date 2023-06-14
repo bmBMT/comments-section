@@ -8,7 +8,7 @@ import { deleteComment } from "../../store/slices/commentsSlice";
 
 const Post = ({ comment }) => {
   const [isReplying, setIsReplying] = useState(false);
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user.user);
   const isYou = user.username === comment.user.username;
   const [isEditing, setIsEditing] = useState(false);
   const dispatch = useDispatch();

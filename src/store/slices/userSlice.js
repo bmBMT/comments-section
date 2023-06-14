@@ -1,9 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit"
+import users from "../../constants/users"
 import imageJuliusomo from '../../assets/imgs/imageJuliusomo.webp'
 
 const initialState = {
-  image: imageJuliusomo,
-  username: "juliusomo"
+  user: {
+    image: imageJuliusomo,
+    username: "juliusomo"
+  },
+  users: users
 }
 
 const userSlice = createSlice({
